@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,900;1,9..40,800&display=swap');
+
+:root{
+    /*Primary*/
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 52%, 65%);
+
+   /*Neutral*/
+   --Dark-brown: hsl(25, 47%, 15%);
+   --Medium-brown: hsl(28, 10%, 53%);
+   --Cream: hsl(27, 66%, 92%);
+   --Very-pale-orange: hsl(33, 100%, 98%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body{
+    max-width: 1600px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--Cream);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+
+}
+
+.card .top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--Soft-red);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--Very-pale-orange);
+}
+
+.top p{
+    font-size: 0.8rem;
+}
+
+.top h1{
+    font-size: 2rem;
+}
+
+.bottom{
+    width: 100%;
+    background: var(--Very-pale-orange);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bottom .title{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--Dark-brown);
+}
+
+hr{
+    border: 1px solid rgb(221, 221, 205);
+}
+
+.description .text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.description .text h1{
+    font-size: 2rem;
+    color: var(--Dark-brown);
+}
+
+.description p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--Medium-brown);
+}
+
+.text div{
+    display: flex;
+    flex-direction: column;
+}
+
+.text div span{
+    margin-left: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Dark-brown);
+    justify-content: right;
+}
+
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--Dark-brown);
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.attribution a {
+    color: var(--Soft-red);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+    body{
+        max-width: 400px;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    canvas{
+        width: 100%;
+    }
+
+    .description p{
+        font-size: 0.6rem;
+    }
+
+    .attribution{
+        width: 90%;
+    }
+}
